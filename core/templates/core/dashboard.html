@@ -1,0 +1,53 @@
+{% extends 'core/base.html' %}
+{% block title %}Dashboard - TaskManager{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="page-title">
+        <h2>¡Hola, {{ user.first_name|default:user.username }}! 👋</h2>
+        <a href="{% url 'core:task_create' %}" class="btn btn-primary">➕ Nueva tarea</a>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-label">Total de tareas</div>
+            <div class="stat-value">{{ stats.total }}</div>
+        </div>
+        <div class="stat-card stat-pending">
+            <div class="stat-label">Pendientes</div>
+            <div class="stat-value">{{ stats.pending }}</div>
+        </div>
+        <div class="stat-card stat-progress">
+            <div class="stat-label">En progreso</div>
+            <div class="stat-value">{{ stats.in_progress }}</div>
+        </div>
+        <div class="stat-card stat-overdue">
+            <div class="stat-label">Vencidas</div>
+            <div class="stat-value">{{ stats.overdue }}</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>📅 Tareas recientes</h3>
+        </div>
+        {% if recent_tasks %}
+            <ul class="task-list">
+                {% for task in recent_tasks %}
+                <li class="task-item">
+                    <div class="task-info">
+                        <strong>{{ task.title }}</strong>
+                        <small>{{ task.project.name }} · {{ task.get_priority_display }}</small>
+                    </div>
+                    <span class="badge badge-{{ task.status }}">{{ task.get_status_display }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <div class="empty-state">
+                <p>Aún no tienes tareas creadas.</p>
+                <a href="{% url 'core:task_create' %}" class="btn btn-primary">Crear mi primera tarea</a>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

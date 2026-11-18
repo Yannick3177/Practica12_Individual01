@@ -1,0 +1,97 @@
+[REQUEST] GET / | User: Anonymous | IP: 127.0.0.1
+[RESPONSE] GET / | Status: 302 | Time: 3.86ms
+[REQUEST] GET /login/?next=/ | User: Anonymous | IP: 127.0.0.1
+[RESPONSE] GET /login/?next=/ | Status: 200 | Time: 9.82ms
+[REQUEST] GET /login/?next=/ | User: Anonymous | IP: 127.0.0.1
+[RESPONSE] GET /login/?next=/ | Status: 200 | Time: 17.15ms
+[REQUEST] POST /login/?next=/ | User: Anonymous | IP: 127.0.0.1
+[AUTH] Login fallido para: PieroGarcia
+[RESPONSE] POST /login/?next=/ | Status: 200 | Time: 200.9ms
+[REQUEST] POST /login/?next=/ | User: Anonymous | IP: 127.0.0.1
+[AUTH] Login exitoso: PieroGarcia
+[RESPONSE] POST /login/?next=/ | Status: 302 | Time: 270.74ms
+[REQUEST] GET / | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET / | Status: 200 | Time: 18.88ms
+[REQUEST] GET /tasks/new/ | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET /tasks/new/ | Status: 200 | Time: 81.93ms
+[REQUEST] POST /tasks/new/ | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] POST /tasks/new/ | Status: 200 | Time: 48.13ms
+[REQUEST] GET /admin/ | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET /admin/ | Status: 200 | Time: 73.49ms
+[REQUEST] GET /profile/ | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET /profile/ | Status: 200 | Time: 11.5ms
+[REQUEST] GET / | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET / | Status: 200 | Time: 9.45ms
+[REQUEST] GET /tasks/new/ | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET /tasks/new/ | Status: 200 | Time: 9.85ms
+[REQUEST] GET / | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET / | Status: 200 | Time: 11.19ms
+[REQUEST] GET /tasks/new/ | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET /tasks/new/ | Status: 200 | Time: 11.87ms
+[REQUEST] GET / | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET / | Status: 200 | Time: 47.01ms
+[REQUEST] GET /tasks/new/ | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET /tasks/new/ | Status: 500 | Time: 192.03ms
+[REQUEST] GET /tasks/new/ | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET /tasks/new/ | Status: 500 | Time: 54.59ms
+[REQUEST] GET /tasks/new/ | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET /tasks/new/ | Status: 200 | Time: 23.39ms
+[REQUEST] GET /projects/new/ | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET /projects/new/ | Status: 200 | Time: 13.76ms
+[REQUEST] POST /projects/new/ | User: PieroGarcia | IP: 127.0.0.1
+[PROJECT] Creado: Pracitcas por PieroGarcia
+[RESPONSE] POST /projects/new/ | Status: 302 | Time: 12.26ms
+[REQUEST] GET /tasks/new/ | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET /tasks/new/ | Status: 200 | Time: 17.19ms
+[REQUEST] GET / | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET / | Status: 200 | Time: 13.05ms
+[REQUEST] POST /logout/ | User: PieroGarcia | IP: 127.0.0.1
+[AUTH] Logout: PieroGarcia
+[RESPONSE] POST /logout/ | Status: 302 | Time: 10.63ms
+[REQUEST] GET /login/ | User: Anonymous | IP: 127.0.0.1
+[RESPONSE] GET /login/ | Status: 200 | Time: 1.9ms
+[REQUEST] POST /login/ | User: Anonymous | IP: 127.0.0.1
+[AUTH] Login exitoso: PieroGarcia
+[RESPONSE] POST /login/ | Status: 302 | Time: 302.29ms
+[REQUEST] GET / | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET / | Status: 200 | Time: 6.75ms
+[REQUEST] GET /tasks/new/ | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET /tasks/new/ | Status: 200 | Time: 12.86ms
+[REQUEST] GET /tasks/new/ | User: Anonymous | IP: 127.0.0.1
+[RESPONSE] GET /tasks/new/ | Status: 302 | Time: 0.84ms
+[REQUEST] GET /login/?next=/tasks/new/ | User: Anonymous | IP: 127.0.0.1
+[RESPONSE] GET /login/?next=/tasks/new/ | Status: 200 | Time: 1.24ms
+[REQUEST] GET /favicon.ico | User: Anonymous | IP: 127.0.0.1
+[RESPONSE] GET /favicon.ico | Status: 404 | Time: 42.21ms
+[REQUEST] POST /login/?next=/tasks/new/ | User: Anonymous | IP: 127.0.0.1
+[AUTH] Login exitoso: PieroGarcia
+[RESPONSE] POST /login/?next=/tasks/new/ | Status: 302 | Time: 582.1ms
+[REQUEST] GET /tasks/new/ | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET /tasks/new/ | Status: 200 | Time: 25.81ms
+[REQUEST] GET / | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET / | Status: 200 | Time: 25.0ms
+[REQUEST] GET /projects/new/ | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET /projects/new/ | Status: 200 | Time: 14.0ms
+[REQUEST] POST /projects/new/ | User: PieroGarcia | IP: 127.0.0.1
+[PROJECT] Creado: Desarrollo por PieroGarcia
+[RESPONSE] POST /projects/new/ | Status: 302 | Time: 18.26ms
+[REQUEST] GET /tasks/new/ | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET /tasks/new/ | Status: 200 | Time: 22.74ms
+[REQUEST] GET / | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET / | Status: 200 | Time: 25.54ms
+[REQUEST] GET /tasks/new/ | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET /tasks/new/ | Status: 200 | Time: 28.14ms
+[REQUEST] POST /tasks/new/ | User: PieroGarcia | IP: 127.0.0.1
+[TASK] Creada: Creacion de portafolio por PieroGarcia
+[RESPONSE] POST /tasks/new/ | Status: 302 | Time: 36.01ms
+[REQUEST] GET / | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET / | Status: 200 | Time: 25.67ms
+[REQUEST] GET / | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET / | Status: 200 | Time: 21.99ms
+[REQUEST] GET / | User: PieroGarcia | IP: 127.0.0.1
+[RESPONSE] GET / | Status: 200 | Time: 25.35ms
+[REQUEST] POST /logout/ | User: PieroGarcia | IP: 127.0.0.1
+[AUTH] Logout: PieroGarcia
+[RESPONSE] POST /logout/ | Status: 302 | Time: 17.16ms
+[REQUEST] GET /login/ | User: Anonymous | IP: 127.0.0.1
+[RESPONSE] GET /login/ | Status: 200 | Time: 1.96ms

@@ -1,0 +1,115 @@
+{% extends 'core/base.html' %}
+{% block title %}{{ mode }} tarea - TaskManager{% endblock %}
+{% block content %}
+<div class="container-medium">
+    <div class="card">
+        <div class="card-header">
+            <h3>{{ mode }} tarea</h3>
+            <p class="text-muted" style="margin-top: 0.25rem;">
+                Completa los datos de la tarea. Los campos marcados con * son obligatorios.
+            </p>
+        </div>
+
+        {% if not form.fields.project.queryset.exists %}
+            <div class="alert alert-warning">
+                ⚠️ <strong>No tienes proyectos creados.</strong> 
+                Primero debes crear un proyecto para poder añadir tareas.
+            </div>
+            <div style="text-align: center; margin: 1.5rem 0;">
+                <a href="{% url 'core:project_create' %}" class="btn btn-primary">📁 Crear mi primer proyecto</a>
+            </div>
+        {% else %}
+            <form method="post" novalidate>
+                {% csrf_token %}
+                
+                <div class="form-group">
+                    <label class="form-label" for="{{ form.title.id_for_label }}">
+                        Título de la tarea <span style="color: var(--danger);">*</span>
+                    </label>
+                    {{ form.title }}
+                    {% if form.title.errors %}
+                        <div class="form-error">{{ form.title.errors.0 }}</div>
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="{{ form.description.id_for_label }}">
+                        Descripción
+                    </label>
+                    {{ form.description }}
+                    {% if form.description.errors %}
+                        <div class="form-error">{{ form.description.errors.0 }}</div>
+                    {% endif %}
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label class="form-label" for="{{ form.project.id_for_label }}">
+                            Proyecto <span style="color: var(--danger);">*</span>
+                        </label>
+                        {{ form.project }}
+                        {% if form.project.errors %}
+                            <div class="form-error">{{ form.project.errors.0 }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="{{ form.assigned_to.id_for_label }}">
+                            Asignado a
+                        </label>
+                        {{ form.assigned_to }}
+                        {% if form.assigned_to.errors %}
+                            <div class="form-error">{{ form.assigned_to.errors.0 }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label class="form-label" for="{{ form.priority.id_for_label }}">
+                            Prioridad
+                        </label>
+                        {{ form.priority }}
+                        {% if form.priority.errors %}
+                            <div class="form-error">{{ form.priority.errors.0 }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="{{ form.status.id_for_label }}">
+                            Estado
+                        </label>
+                        {{ form.status }}
+                        {% if form.status.errors %}
+                            <div class="form-error">{{ form.status.errors.0 }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="{{ form.due_date.id_for_label }}">
+                            Fecha límite
+                        </label>
+                        {{ form.due_date }}
+                        {% if form.due_date.errors %}
+                            <div class="form-error">{{ form.due_date.errors.0 }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                {% if form.non_field_errors %}
+                    <div class="alert alert-error">
+                        {% for error in form.non_field_errors %}
+                            <div>{{ error }}</div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary">💾 Guardar tarea</button>
+                    <a href="{% url 'core:dashboard' %}" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
